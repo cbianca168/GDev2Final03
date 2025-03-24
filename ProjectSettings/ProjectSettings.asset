@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: e7559fbd9b054c54f8d6c9305e587a2f
+  productGUID: a4c95143483ac0648b9a0a09a889751f
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -788,7 +788,7 @@ PlayerSettings:
   cloudProjectId: a3e8eb53-d2d2-4a67-a1e3-a53be77b6b55
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project 2025-03-07_17-48-16
+  projectName: New Unity Project
   organizationId: carolynbianca
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
