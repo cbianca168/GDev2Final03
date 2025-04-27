@@ -783,12 +783,12 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 3
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: a3e8eb53-d2d2-4a67-a1e3-a53be77b6b55
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: New Unity Project
+  projectName: My project 2025-03-07_17-48-16
   organizationId: carolynbianca
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
