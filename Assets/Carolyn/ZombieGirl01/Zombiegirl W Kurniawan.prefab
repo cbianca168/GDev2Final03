@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3466405493326656114
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -147.81
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 102.51649
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -164.28
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.89658445
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4428729
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -52.575
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      propertyPath: m_Name
+      value: Zombiegirl W Kurniawan
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 38745c4b06c3a8d45879927c0b08c335,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5714008103332997428}
+  m_SourcePrefab: {fileID: 100100000, guid: 38745c4b06c3a8d45879927c0b08c335, type: 3}
+--- !u!1 &4384901573797449507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 38745c4b06c3a8d45879927c0b08c335,
+    type: 3}
+  m_PrefabInstance: {fileID: 3466405493326656114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5714008103332997428
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4384901573797449507}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf3d2797f5175854096cbd4efb575407, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
