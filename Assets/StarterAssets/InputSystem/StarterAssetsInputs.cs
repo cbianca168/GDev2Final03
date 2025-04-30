@@ -12,6 +12,7 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool punch;  // C. punch input
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -43,6 +44,12 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		//C. Adding new punch value
+		public void OnPunch(InputValue value)
+		{
+			PunchInput(value.isPressed);
+		}
 #endif
 
 
@@ -64,6 +71,12 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+		//C. added punch input
+		public void PunchInput(bool newPunchState)
+		{
+			punch = newPunchState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
