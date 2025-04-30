@@ -33,8 +33,10 @@ public class ZombieSpawner : MonoBehaviour
         _timeUntilSpawn = Random.Range(_minimumSpawnTime, _maximumSpawnTime);
     }
 
-    private void Spawn()
+    public void Spawn()
     {
+        StartCoroutine(DeactivateAfterSeconds(10f));
+        
         SetTimeUntilSpawn();
 
         _timeUntilSpawn -= Time.deltaTime;
@@ -43,7 +45,16 @@ public class ZombieSpawner : MonoBehaviour
         {
             Instantiate(_zombiePrefab, transform.position, Quaternion.identity);
             SetTimeUntilSpawn();
+            Debug.Log("instantiating object");
         }
+
+        Debug.Log("Spawn Called");
+    }
+
+    IEnumerator DeactivateAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        gameObject.SetActive(false);
     }
 
 }
