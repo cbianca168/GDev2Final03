@@ -13,7 +13,7 @@ public class ZombieSpawner : MonoBehaviour
     [SerializeField]
     private float _maximumSpawnTime;
 
-    private float _timeUntilSpawn;
+    //private float _timeUntilSpawn;
     
     
     // Start is called before the first frame update
@@ -25,35 +25,33 @@ public class ZombieSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
-    private void SetTimeUntilSpawn()
-    {
-        _timeUntilSpawn = Random.Range(_minimumSpawnTime, _maximumSpawnTime);
-    }
 
     public void Spawn()
     {
-        StartCoroutine(DeactivateAfterSeconds(10f));
         
-        SetTimeUntilSpawn();
-
-        _timeUntilSpawn -= Time.deltaTime;
-
-        if (_timeUntilSpawn <= 0 )
-        {
-            Instantiate(_zombiePrefab, transform.position, Quaternion.identity);
-            SetTimeUntilSpawn();
-            Debug.Log("instantiating object");
-        }
-
-        Debug.Log("Spawn Called");
+        StartCoroutine(SpawnZombiesForTime(10f));
     }
 
-    IEnumerator DeactivateAfterSeconds(float seconds)
+    
+    private IEnumerator SpawnZombiesForTime(float duration)
     {
-        yield return new WaitForSeconds(seconds);
+        float timeElapsed = 0f;
+
+        while (timeElapsed < duration)
+        {
+            float _timeUntilSpawn = Random.Range(_minimumSpawnTime, _maximumSpawnTime);
+            yield return new WaitForSeconds(_timeUntilSpawn);
+
+            Instantiate(_zombiePrefab, transform.position, Quaternion.identity);
+            Debug.Log("Zombie spawned!");
+
+            timeElapsed += _timeUntilSpawn;
+        }
+
+        Debug.Log("Spawning ended, deactivating spawner.");
         gameObject.SetActive(false);
     }
 
