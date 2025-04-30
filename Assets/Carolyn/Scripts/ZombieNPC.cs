@@ -9,7 +9,7 @@ public class ZombieNPC : MonoBehaviour
     Animator animator;
 
     //C. NCP naviagion target goal
-    public Transform goal;
+    private Transform goal;
 
     //C. Getting navmeshagent
     private NavMeshAgent agent;
@@ -19,6 +19,12 @@ public class ZombieNPC : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            goal = player.transform;
+        }
     }
 
     // Update is called once per frame
@@ -27,12 +33,15 @@ public class ZombieNPC : MonoBehaviour
         
     }
 
+    //C. Waiting for the stand up animation to be complete before npc follows player
     public void OnStandUpAnimationEnd()
     {
         Debug.Log("Zombies finished standing up");
         agent.destination = goal.position;
     }
 
+    
+    //C. Transitions animation to the attack animation
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -41,6 +50,7 @@ public class ZombieNPC : MonoBehaviour
         }
     }
 
+    //C. Transitions animation back to running animation
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
