@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -42,10 +43,21 @@ public class ZombieNPC : MonoBehaviour
 
     
     //C. Transitions animation to the attack animation
+    //C. Also checks for player attack
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            
+            Animator playerAnimator = other.GetComponent<Animator>();
+            if (playerAnimator != null)
+            {
+                AnimatorStateInfo stateInfo = playerAnimator.GetCurrentAnimatorStateInfo(0);
+                if (stateInfo.IsName("JumpStart") || stateInfo.IsName("InAir") || stateInfo.IsName("JumpLand"))
+                {
+                    Die();
+                }
+            }
             animator.SetBool("isClose", true);
         }
     }
@@ -57,6 +69,23 @@ public class ZombieNPC : MonoBehaviour
         {
             animator.SetBool("isClose", false);
         }
+    }
+
+    public void Die()
+    {
+        animator.SetBool("isDead", true);
+        //OnDyingAnimationEnd();
+        //OnDeathAnimationEnd();
+    }
+
+    public void OnDyingAnimationEnd()
+    {
+        Destroy(gameObject);
+    }
+
+    public void OnDeathAnimationEnd()
+    {
+        Destroy(gameObject);
     }
 
 }
